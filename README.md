@@ -37,7 +37,7 @@ A parameterised counter holds each serial bit for approximately 5,208 FPGA clock
 
 ## FPGA implementation
 
-- Top-level module connects the RTL to the board clock, reset and GPIO pins.
+- Top-level module connects the RTL to the 50 MHz board clock and serial-output GPIO; reset is held inactive internally rather than assigned to an external FPGA pin.
 - Baud counter generates one UART bit interval.
 - State machine sequences standard 8N1 frames.
 - Shift/data register presents each bit least significant first.
